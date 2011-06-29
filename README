@@ -1,0 +1,49 @@
+*****************************
+shelltag
+*****************************
+shelltag is intended to be a mp3 id3 tagging program that is run in the 
+command line/shell.  At the moment, it can delete all tags, create a tag
+in an empty file, remove fields, and add fields.  This was built for my
+personal use for my tagging needs to suppplement GUI-based programs such
+as Mp3Tag or MP3BookHelper.
+
+This was created for my personal use due to boredom and the source is
+being released due to what's required under the GNU General Public
+License v.2.  shelltag acts as a wrapper for the mutagen tagging library.
+
+shelltag uses the following
+---------------------------
+* Python 2.6
+* mutagen 1.19
+This is the ID3 tagging library shelltag uses.
+* compatid3.py (from picard)
+This adds support for ID3v2.3.  For ease of building, compatid3.py 
+is included in the shelltag/shelltag directory.
+
+Requirements
+------------
+* Microsoft Windows
+(NOTE: it might work under a Unix-like system, but it hasn't been tested)
+* Python 2.6
+* mutagen 1.19
+A copy of mutagen (mutagen-1.19.tar.gz) used in shelltag is included
+in this folder. mutagen must be setup using the directions within the
+mutagen tarball.
+
+How to use
+----------
+You can either...
+1. Leave the directory hierarchy intact and run shelltag.py from there.
+2. $ python setup.py install
+to have all the supporting modules added using distutils, so that you
+only need to keep the shelltag.py file.
+
+$ shelltag.py
+Prints the usage
+
+$ shelltag.py -a ARTIST "D:\\blah.mp3" Radiohead
+Make ARTIST -> Radiohead in D:\blah.mp3.
+
+$ shelltag.py --help
+Prints a listing of all available commands
+
